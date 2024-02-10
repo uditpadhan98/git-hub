@@ -1,7 +1,7 @@
 import React from 'react';
 import { RxGithubLogo,RxLinkedinLogo } from "react-icons/rx";
 import { PiTwitterLogoFill } from "react-icons/pi";
-import { Link } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <footer className="mx-auto w-full cursor-default items-center justify-center backdrop-blur-sm py-4 text-center shadow-xl md:px-0">
       <section className="mx-auto flex w-full max-w-4xl flex-col items-center justify-between gap-y-4 shadow-xl md:flex-row md:gap-y-0">
-        <Link href="/#">
+        <Link to="/">
           <span className="text-lg font-black flex flex-row items-center justify-center gap-2">
             <RxGithubLogo width="22" height="22" />
             git-hub
