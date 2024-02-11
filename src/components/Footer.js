@@ -39,7 +39,7 @@ const Footer = () => {
 
         <div className="flex gap-4">
           {icons.map((icon, index) => (
-            <Link href={icon.href} target="_blank" key={index}>
+            <Link to={icon.href} target="_blank" key={index}>
               {icon.icon}
             </Link>
           ))}
