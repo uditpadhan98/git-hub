@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import Repos from "../components/Repos";
 import Graph from "./Graph";
+import "../App.css";
 
 const Profile = () => {
   const location = useLocation();
@@ -169,9 +170,14 @@ const Profile = () => {
             <Graph username={userData.login} />
           </>
         ) : (
-          <div>
-			<h6>Loading</h6>
-		  </div>
+          <div className="flex flex-col items-center justify-center h-screen space-y-4">
+            <div className="loader-container flex items-center justify-center">
+              <div className="ball ball1"></div>
+              <div className="ball ball2"></div>
+              <div className="ball ball3"></div>
+            </div>
+            <p>We are fetching your data...</p>
+          </div>
         )}
       </Container>
     </div>

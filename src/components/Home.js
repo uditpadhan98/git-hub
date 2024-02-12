@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Input } from '@chakra-ui/react';
-import { Button } from '@chakra-ui/react';
+import React, { useState } from "react";
+import { Input } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import "../App.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Home = () => {
-    const [username, setUsername] = useState("");
-    const handleUsernameChange = (e) => {
-      setUsername(e.target.value);
-    };
+  const [username, setUsername] = useState("");
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
   return (
     <main className="flex h-screen flex-col items-center justify-center p-4 lg:p-24">
       <div className="relative flex flex-col w-full max-w-4xl gap-8 place-items-center">
@@ -36,7 +36,7 @@ const Home = () => {
           </p>
         </div>
         <div className="flex w-full md:max-w-sm items-center space-x-4 md:space-x-8">
-          <form className="flex w-full space-x-3" >
+          <form className="flex w-full space-x-3">
             <Input
               type="text"
               placeholder="Enter your GitHub username"
@@ -45,11 +45,11 @@ const Home = () => {
               onChange={handleUsernameChange}
             />
             <Button
-              colorScheme='blue'
+              colorScheme="blue"
               // onClick={handleSubmit}
               type="submit"
-              disabled={ username.trim() === ""}
-              opacity={username.trim()==="" ? 0.5 : 1 }
+              disabled={username.trim() === ""}
+              opacity={username.trim() === "" ? 0.5 : 1}
               className="h-12 px-6 flex items-center justify-center"
             >
               <Link to="/profile" state={username}>
@@ -61,7 +61,7 @@ const Home = () => {
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
